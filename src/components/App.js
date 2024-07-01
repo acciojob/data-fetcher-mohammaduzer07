@@ -27,10 +27,10 @@ const App = () => {
   }, []);
 
   if (loading) {
-    return <div>loading...</div>;
+    return <div>Loading...</div>;
   }
   if (error) {
-    return <div>An error occured:{error.message}</div>;
+    return <div id="root">An error occurred: {error.message}</div>;
   }
   if (!fetchData) {
     return <div>No data found</div>;
@@ -38,7 +38,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Fetch Data from API</h1>
+      <h1>Data Fetched from API</h1>
       <pre>{JSON.stringify(fetchData, null, 2)}</pre>
     </div>
   );
